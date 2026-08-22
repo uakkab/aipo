@@ -7,84 +7,47 @@
 <link rel="stylesheet" href="shared.css">
 <link rel="stylesheet" href="main.css">
 <style>
-/* Domain 01 Specific Styles */
-.domain-intro { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin: 24px 0; }
-.intro-block { background: #f5f5f5; padding: 20px; border-radius: 6px; }
-.intro-block blockquote { font-style: italic; color: #d84315; font-weight: 500; margin: 12px 0; padding-left: 16px; border-left: 3px solid #d84315; }
-.intro-block h3 { margin-top: 0; }
-
-.readiness-domains { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 16px; margin: 20px 0; }
-.readiness-card { background: white; border: 1px solid #e0e0e0; border-radius: 8px; overflow: hidden; }
-.card-num { background: linear-gradient(135deg, #1976d2, #1565c0); color: white; font-weight: bold; font-size: 1.8rem; width: 60px; height: 60px; display: flex; align-items: center; justify-content: center; }
-.readiness-card:nth-child(2) .card-num { background: linear-gradient(135deg, #388e3c, #2e7d32); }
-.readiness-card:nth-child(3) .card-num { background: linear-gradient(135deg, #f57c00, #e65100); }
-.readiness-card:nth-child(4) .card-num { background: linear-gradient(135deg, #7b1fa2, #6a1b9a); }
-.readiness-card:nth-child(5) .card-num { background: linear-gradient(135deg, #c2185b, #ad1457); }
-.readiness-card:nth-child(6) .card-num { background: linear-gradient(135deg, #00838f, #006064); }
-.card-body { padding: 16px; }
-.card-body h4 { margin: 0 0 4px 0; font-size: 1.1rem; }
-.card-label { display: block; font-size: 0.85rem; color: #666; font-weight: 500; margin-bottom: 12px; }
-.card-body ul { margin: 12px 0; padding-left: 20px; }
-.card-body li { margin: 8px 0; line-height: 1.4; }
-.card-gate { background: #e8f5e9; border-left: 3px solid #388e3c; padding: 12px; margin-top: 12px; font-size: 0.9rem; border-radius: 4px; }
-
-.maturity-intro { background: #f5f5f5; padding: 16px; border-radius: 6px; margin: 16px 0; }
-
-.maturity-matrix { width: 100%; border-collapse: collapse; font-size: 0.9rem; }
-.maturity-matrix th, .maturity-matrix td { border: 1px solid #ddd; padding: 12px; text-align: left; }
-.maturity-matrix th { background: #1976d2; color: white; font-weight: bold; }
-.maturity-matrix tbody tr:nth-child(odd) { background: #f9f9f9; }
-.maturity-matrix tbody tr:hover { background: #f0f0f0; }
-.maturity-matrix th strong { font-weight: 600; }
-
-.levels-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px; margin: 20px 0; }
-.level-card { background: white; border: 2px solid #ddd; border-radius: 8px; padding: 16px; }
-.level-0 { border-color: #999; }
-.level-1 { border-color: #1976d2; background: linear-gradient(to bottom right, #e3f2fd, white); }
-.level-2 { border-color: #f57c00; background: linear-gradient(to bottom right, #fff3e0, white); border-width: 3px; }
-.level-3 { border-color: #7b1fa2; background: linear-gradient(to bottom right, #f3e5f5, white); }
-.level-4 { border-color: #388e3c; background: linear-gradient(to bottom right, #e8f5e9, white); }
-.level-header { font-weight: bold; font-size: 1.1rem; margin-bottom: 12px; }
-.level-0 .level-header { color: #666; }
-.level-1 .level-header { color: #1976d2; }
-.level-2 .level-header { color: #f57c00; }
-.level-3 .level-header { color: #7b1fa2; }
-.level-4 .level-header { color: #388e3c; }
-
-.quickref-intro { background: #e3f2fd; padding: 16px; border-left: 4px solid #1976d2; border-radius: 4px; margin: 16px 0; }
-.quickref-intro strong { color: #1565c0; }
-
-.checklist-items { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 16px; margin: 20px 0; }
-.checklist-item { background: white; border: 1px solid #e0e0e0; border-radius: 8px; padding: 16px; display: flex; gap: 16px; }
-.item-num { background: #1976d2; color: white; width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; flex-shrink: 0; }
-.item-content { flex: 1; }
-.item-content h4 { margin: 0 0 8px 0; }
-.item-content p { margin: 6px 0; font-size: 0.9rem; }
-
-.plus-note { background: #fff3cd; border-left: 4px solid #ffc107; padding: 12px; border-radius: 4px; margin: 16px 0; }
-
-.gap-signals { background: #ffebee; border-left: 4px solid #d32f2f; padding: 16px; border-radius: 4px; margin: 20px 0; }
-.gap-signals h3 { margin: 0 0 12px 0; color: #c62828; }
-.gap-signals ul { margin: 8px 0; padding-left: 20px; }
-.gap-signals li { margin: 8px 0; }
-
-.antipatterns { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 16px; margin: 20px 0; }
-.antipattern { background: #fbe9e7; border-left: 4px solid #d84315; padding: 16px; border-radius: 6px; }
-.antipattern h4 { margin: 0 0 8px 0; color: #bf360c; }
-.antipattern strong { color: #d84315; }
-
-.closing-section { background: #f5f5f5; padding: 24px; border-radius: 8px; margin: 32px 0; }
-.closing-quote { background: white; padding: 20px; border-radius: 6px; margin-top: 20px; border-left: 4px solid #1976d2; }
-.closing-quote blockquote { font-style: italic; color: #1565c0; font-weight: 500; margin: 0 0 12px 0; }
-.closing-quote p { margin: 8px 0; }
-
+.d01-intro-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin: 24px 0; }
+.d01-intro-block { background: #f5f5f5; padding: 20px; border-radius: 6px; }
+.d01-intro-block h3 { margin-top: 0; }
+.d01-intro-block blockquote { font-style: italic; color: #d84315; font-weight: 500; margin: 12px 0; padding-left: 16px; border-left: 3px solid #d84315; }
+.d01-readiness-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 16px; margin: 20px 0; }
+.d01-card { background: white; border: 1px solid #e0e0e0; border-radius: 8px; overflow: hidden; }
+.d01-card-num { background: #1976d2; color: white; font-weight: bold; font-size: 1.8rem; width: 60px; height: 60px; display: flex; align-items: center; justify-content: center; }
+.d01-card:nth-child(2) .d01-card-num { background: #388e3c; }
+.d01-card:nth-child(3) .d01-card-num { background: #f57c00; }
+.d01-card:nth-child(4) .d01-card-num { background: #7b1fa2; }
+.d01-card:nth-child(5) .d01-card-num { background: #c2185b; }
+.d01-card:nth-child(6) .d01-card-num { background: #00838f; }
+.d01-card-body { padding: 16px; }
+.d01-card-body h4 { margin: 0 0 4px 0; }
+.d01-card-label { display: block; font-size: 0.85rem; color: #666; font-weight: 500; margin-bottom: 12px; }
+.d01-card-gate { background: #e8f5e9; border-left: 3px solid #388e3c; padding: 12px; margin-top: 12px; font-size: 0.9rem; border-radius: 4px; }
+.d01-matrix { width: 100%; border-collapse: collapse; font-size: 0.85rem; margin: 20px 0; }
+.d01-matrix th, .d01-matrix td { border: 1px solid #ddd; padding: 10px; text-align: left; }
+.d01-matrix th { background: #1976d2; color: white; font-weight: bold; }
+.d01-matrix tbody tr:nth-child(odd) { background: #f9f9f9; }
+.d01-levels { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 16px; margin: 20px 0; }
+.d01-level { background: white; border: 2px solid #ddd; border-radius: 8px; padding: 16px; }
+.d01-level-1 { border-color: #1976d2; }
+.d01-level-2 { border-color: #f57c00; border-width: 3px; }
+.d01-level-3 { border-color: #7b1fa2; }
+.d01-level-4 { border-color: #388e3c; }
+.d01-level h4 { margin: 0 0 12px 0; }
+.d01-checklist-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 16px; margin: 20px 0; }
+.d01-checklist-item { background: white; border: 1px solid #e0e0e0; border-radius: 8px; padding: 16px; }
+.d01-checklist-num { background: #1976d2; color: white; width: 32px; height: 32px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; font-weight: bold; margin-right: 12px; }
+.d01-checklist-item h4 { margin: 0 0 8px 0; }
+.d01-checklist-item p { margin: 6px 0; font-size: 0.9rem; }
+.d01-antipattern { background: #fbe9e7; border-left: 4px solid #d84315; padding: 16px; border-radius: 6px; margin: 16px 0; }
+.d01-antipattern h4 { margin: 0 0 8px 0; color: #bf360c; }
+.d01-gap { background: #ffebee; border-left: 4px solid #d32f2f; padding: 16px; border-radius: 4px; margin: 20px 0; }
+.d01-gap h3 { margin: 0 0 12px 0; color: #c62828; }
 @media (max-width: 768px) {
-  .domain-intro { grid-template-columns: 1fr; }
-  .readiness-domains { grid-template-columns: 1fr; }
-  .levels-container { grid-template-columns: 1fr; }
-  .checklist-items { grid-template-columns: 1fr; }
-  .antipatterns { grid-template-columns: 1fr; }
-  .matrix-wrap { overflow-x: auto; }
+  .d01-intro-grid { grid-template-columns: 1fr; }
+  .d01-readiness-grid { grid-template-columns: 1fr; }
+  .d01-levels { grid-template-columns: 1fr; }
+  .d01-checklist-grid { grid-template-columns: 1fr; }
 }
 </style>
 </head>
@@ -93,8 +56,6 @@
 <script src="layout-loader.js"></script>
 
 <div id="aipo-content">
-
-<!-- ── PAGE ───────────────────────────────────────────── -->
 <div class="page">
 
   <!-- BANNER -->
@@ -102,7 +63,7 @@
     <div class="banner-eyebrow">Foundation Layer · Domain 01</div>
     <div class="banner-title">Process Maturity<br><em>From Tacit Knowledge to Autonomous Automation</em></div>
     <div class="banner-desc">
-      Every organization runs on operating knowledge: processes, workflows, policies, and procedures. Most of it lives in people's heads. Before any AI transformation can succeed, that knowledge must move from tacit to documented to practiced to automated. This domain guides that journey across five levels of maturity.
+      Every organization runs on operating knowledge: processes, workflows, policies, and procedures. Most of it lives in people's heads. Before any AI transformation can succeed, that knowledge must move from tacit to documented to practiced to automated. This domain guides that journey.
     </div>
     <div style="margin-top:12px;padding-top:12px;border-top:1px solid rgba(255,255,255,0.2);font-size:0.76rem;">
       <strong>💡 Core Principle:</strong> <em>"Automation does not improve a process. It fixes it in place and runs it faster."</em>
@@ -111,35 +72,34 @@
 
   <!-- NAVIGATION -->
   <nav class="page-section-jump" aria-label="Jump to section">
-    <label class="page-section-jump-label" for="domain-jump">Jump to…</label>
-    <select id="domain-jump" class="page-section-jump-select" data-jump="1">
+    <label class="page-section-jump-label" for="d01-jump">Jump to…</label>
+    <select id="d01-jump" class="page-section-jump-select" data-jump="1">
       <option value="">Navigate</option>
-      <option value="sec-overview">Overview & Principle</option>
-      <option value="sec-readiness">Readiness Gate (6 Domains)</option>
-      <option value="sec-framework">L0-L4 Maturity Framework</option>
-      <option value="sec-checklist">Quick Reference & Checklist</option>
-      <option value="sec-anti">Anti-Patterns</option>
+      <option value="d01-overview">Overview</option>
+      <option value="d01-readiness">Readiness Gate</option>
+      <option value="d01-framework">L0-L4 Framework</option>
+      <option value="d01-checklist">Checklist</option>
+      <option value="d01-gaps">Gap Signals</option>
+      <option value="d01-anti">Anti-Patterns</option>
     </select>
   </nav>
 
-  <!-- ── OVERVIEW ──────────────────────────────────── -->
-  <div class="sec-divider" id="sec-overview">
+  <!-- OVERVIEW -->
+  <div class="sec-divider" id="d01-overview">
     <div class="sec-divider-lbl">Foundation</div>
     <div class="sec-divider-title">Why Process Maturity Matters</div>
     <div class="sec-divider-sep"></div>
   </div>
 
-  <div class="domain-intro">
-    <div class="intro-block">
+  <div class="d01-intro-grid">
+    <div class="d01-intro-block">
       <h3>The Core Insight</h3>
-      <blockquote>
-        "Automation does not improve a process. It fixes it in place and runs it faster."
-      </blockquote>
+      <blockquote>"Automation does not improve a process. It fixes it in place and runs it faster."</blockquote>
       <p>If a process is undefined, automation will automate whatever version the implementer happened to observe. If a process is inconsistent, automation will pick one variant and silently retire the others. If the process depends on someone quietly correcting bad inputs, automation removes that person and the corrections with them.</p>
       <p><strong>This is not new.</strong> Michael Hammer warned about "paving the cow paths" in 1990. What is new: AI lowers the cost of automating something to near zero. Organizations now automate things they would never have formalized before. <strong>The prerequisite work therefore matters more in the AI era, not less.</strong></p>
     </div>
 
-    <div class="intro-block">
+    <div class="d01-intro-block">
       <h3>The Four-State Ladder</h3>
       <p>Operating knowledge moves through four states, one process at a time:</p>
       <ol>
@@ -148,313 +108,223 @@
         <li><strong>Automate it under supervision</strong> by interviewing people who hold that intuition</li>
         <li><strong>Let it run autonomously</strong> with limited oversight</li>
       </ol>
-      <p style="color: #d84315; font-weight: 500;">⚠️ Skipping a level is the most common cause of failed automation.</p>
+      <p style="color: #d84315; font-weight: 500; margin-top: 12px;">⚠️ Skipping a level is the most common cause of failed automation.</p>
     </div>
   </div>
 
-  <!-- ── READINESS GATE ──────────────────────────────── -->
-  <div class="sec-divider" id="sec-readiness">
+  <!-- READINESS GATE -->
+  <div class="sec-divider" id="d01-readiness">
     <div class="sec-divider-lbl">Prerequisite</div>
     <div class="sec-divider-title">The Readiness Gate: 6 Domains That Must Pass</div>
     <div class="sec-divider-sep"></div>
-    <p style="margin-top: 12px; font-size: 0.9rem; color: #666;">Before any process can be automated, all six domains must be ready. A "mostly" on any of them is a "no" for that process.</p>
   </div>
 
-  <div class="readiness-domains">
-
-    <!-- Domain 1: Process -->
-    <div class="readiness-card">
-      <div class="card-num">1</div>
-      <div class="card-body">
+  <div class="d01-readiness-grid">
+    <div class="d01-card">
+      <div class="d01-card-num">1</div>
+      <div class="d01-card-body">
         <h4>Process</h4>
-        <div class="card-label">Documented, stable, measured</div>
-        <ul>
-          <li><strong>Artifact:</strong> Process exists as a document, not just in people's heads</li>
-          <li><strong>Stability:</strong> Process has run in current form for at least one full business cycle</li>
-          <li><strong>Volume & Cost:</strong> Known: runs per month, time per run, cost, error rate, downstream impact</li>
-          <li><strong>Ownership:</strong> Single named owner accountable for definition, exceptions, and outcomes</li>
+        <div class="d01-card-label">Documented, stable, measured</div>
+        <ul style="margin: 12px 0; padding-left: 20px; font-size: 0.9rem;">
+          <li>Process exists as a document, not just in people's heads</li>
+          <li>Stable for at least one full business cycle</li>
+          <li>Volume, cost, and error rate known</li>
+          <li>Single named owner accountable</li>
         </ul>
-        <div class="card-gate">✓ Gate: Documented including branches and exceptions; stable for at least one cycle; volume and cost known; one named owner</div>
+        <div class="d01-card-gate">✓ Gate: Documented; stable; volume/cost known; one owner</div>
       </div>
     </div>
 
-    <!-- Domain 2: Data -->
-    <div class="readiness-card">
-      <div class="card-num">2</div>
-      <div class="card-body">
+    <div class="d01-card">
+      <div class="d01-card-num">2</div>
+      <div class="d01-card-body">
         <h4>Data</h4>
-        <div class="card-label">Known, accessible, classified, measured</div>
-        <ul>
-          <li><strong>Inventory:</strong> You know where the data is (systems, owners, formats)</li>
-          <li><strong>Source of Truth:</strong> One system wins when data disagrees</li>
-          <li><strong>Machine Accessible:</strong> Not PDFs or emails; APIs, databases, or structured exports</li>
-          <li><strong>Quality Measured:</strong> Completeness, accuracy, consistency known for fields the automation will use</li>
-          <li><strong>Classification:</strong> Data classified at minimum as Public / Internal / Restricted</li>
+        <div class="d01-card-label">Known, accessible, classified, measured</div>
+        <ul style="margin: 12px 0; padding-left: 20px; font-size: 0.9rem;">
+          <li>You know where the data is</li>
+          <li>One system wins when data disagrees (source of truth)</li>
+          <li>Machine accessible (APIs, databases, not PDFs)</li>
+          <li>Quality measured for fields automation will use</li>
+          <li>Classified as Public / Internal / Restricted</li>
         </ul>
-        <div class="card-gate">✓ Gate: Inputs machine-accessible; source of truth defined; quality measured on a sample; classification applied</div>
+        <div class="d01-card-gate">✓ Gate: Machine-accessible; source of truth; quality measured; classified</div>
       </div>
     </div>
 
-    <!-- Domain 3: Structure -->
-    <div class="readiness-card">
-      <div class="card-num">3</div>
-      <div class="card-body">
+    <div class="d01-card">
+      <div class="d01-card-num">3</div>
+      <div class="d01-card-body">
         <h4>Structure</h4>
-        <div class="card-label">Roles, governance, exception handling</div>
-        <ul>
-          <li><strong>Roles by Outcome:</strong> Roles defined by what they ensure, not what activities they do</li>
-          <li><strong>Bridging Role:</strong> Someone owns the interface between technology and operations (with capacity)</li>
-          <li><strong>Decision Rights:</strong> Clear who can approve, pause, rollback, and set exception thresholds</li>
-          <li><strong>Exception Path:</strong> Defined route where exceptions land, who picks them up, how quickly</li>
+        <div class="d01-card-label">Roles, governance, exception handling</div>
+        <ul style="margin: 12px 0; padding-left: 20px; font-size: 0.9rem;">
+          <li>Roles defined by outcomes, not activities</li>
+          <li>Bridging role exists (tech ↔ operations) with capacity</li>
+          <li>Clear who can approve, pause, rollback</li>
+          <li>Exception path defined: where they land, who picks them up</li>
         </ul>
-        <div class="card-gate">✓ Gate: Affected roles framed by outcome; bridging role staffed; decision rights settled; exception path defined</div>
+        <div class="d01-card-gate">✓ Gate: Roles framed by outcome; governance decided; exceptions routed</div>
       </div>
     </div>
 
-    <!-- Domain 4: Technical -->
-    <div class="readiness-card">
-      <div class="card-num">4</div>
-      <div class="card-body">
+    <div class="d01-card">
+      <div class="d01-card-num">4</div>
+      <div class="d01-card-body">
         <h4>Technical</h4>
-        <div class="card-label">APIs, identity, logging, environments</div>
-        <ul>
-          <li><strong>Interfaces:</strong> Systems can be read from and written to programmatically</li>
-          <li><strong>Identity & Access:</strong> Automations run as scoped identities with audit trails and revocation paths</li>
-          <li><strong>Logging:</strong> Every automated action recorded with context to reconstruct what happened and why</li>
-          <li><strong>Environments:</strong> A non-production place to test automation before production</li>
-          <li><strong>Support:</strong> In-house or retained capacity to understand, debug, and modify automation</li>
+        <div class="d01-card-label">APIs, identity, logging, environments</div>
+        <ul style="margin: 12px 0; padding-left: 20px; font-size: 0.9rem;">
+          <li>Systems readable/writable programmatically</li>
+          <li>Automations run as scoped identities with audit trails</li>
+          <li>Every action logged with context</li>
+          <li>Non-production environment to test before production</li>
         </ul>
-        <div class="card-gate">✓ Gate: Systems reachable programmatically; automation identity scoped and audited; logging in place; non-production environment exists</div>
+        <div class="d01-card-gate">✓ Gate: Reachable via APIs; identity/logging in place; test environment</div>
       </div>
     </div>
 
-    <!-- Domain 5: People -->
-    <div class="readiness-card">
-      <div class="card-num">5</div>
-      <div class="card-body">
+    <div class="d01-card">
+      <div class="d01-card-num">5</div>
+      <div class="d01-card-body">
         <h4>People</h4>
-        <div class="card-label">Literacy, psychological safety, capacity</div>
-        <ul>
-          <li><strong>Baseline Literacy:</strong> Staff understand what AI/automation can and cannot do (plausible vs. verified output, failure modes)</li>
-          <li><strong>Psychological Safety:</strong> Established norm that surfacing problems is rewarded, not punished</li>
-          <li><strong>Change Capacity:</strong> Organization not in the middle of merger, migration, crisis, or leadership transition</li>
+        <div class="d01-card-label">Literacy, psychological safety, capacity</div>
+        <ul style="margin: 12px 0; padding-left: 20px; font-size: 0.9rem;">
+          <li>Baseline AI literacy: what it can and cannot do</li>
+          <li>Psychological safety: reporting problems is rewarded</li>
+          <li>Change capacity: not in the middle of crisis/merger</li>
         </ul>
-        <div class="card-gate">✓ Gate: Baseline literacy delivered; reporting norm established; no competing organizational crisis</div>
+        <div class="d01-card-gate">✓ Gate: Literacy delivered; reporting culture established</div>
       </div>
     </div>
 
-    <!-- Domain 6: Measurement -->
-    <div class="readiness-card">
-      <div class="card-num">6</div>
-      <div class="card-body">
+    <div class="d01-card">
+      <div class="d01-card-num">6</div>
+      <div class="d01-card-body">
         <h4>Measurement</h4>
-        <div class="card-label">Baseline captured before automation</div>
-        <ul>
-          <li><strong>Current State:</strong> Measured values for cycle time, hands-on time, volume, error rate, and cost</li>
-          <li><strong>Post-Automation:</strong> Will track exception rate, exception resolution time, and automation uptime</li>
-          <li><strong>Comparison:</strong> Automation success measured against baseline, not opinion</li>
+        <div class="d01-card-label">Baseline captured before automation</div>
+        <ul style="margin: 12px 0; padding-left: 20px; font-size: 0.9rem;">
+          <li>Current state: cycle time, hands-on time, volume, errors, cost</li>
+          <li>Post-automation: exception rate, resolution time, uptime tracked</li>
+          <li>Success measured against baseline, not opinion</li>
         </ul>
-        <div class="card-gate">✓ Gate: Pre-automation baseline captured (cycle time, errors, cost, hands-on time, volume)</div>
+        <div class="d01-card-gate">✓ Gate: Pre-automation baseline captured</div>
       </div>
     </div>
-
   </div>
 
-  <!-- ── MATURITY FRAMEWORK ──────────────────────────────── -->
-  <div class="sec-divider" id="sec-framework">
+  <!-- FRAMEWORK -->
+  <div class="sec-divider" id="d01-framework">
     <div class="sec-divider-lbl">Progression</div>
     <div class="sec-divider-title">L0-L4: The Maturity Levels</div>
     <div class="sec-divider-sep"></div>
   </div>
 
-  <div class="maturity-intro">
+  <div style="background: #f5f5f5; padding: 16px; border-radius: 6px; margin: 16px 0;">
     <p>Once a process passes the readiness gate, it progresses through five maturity levels. Each level is a gate — a process sits at exactly one level and moves right only when the exit criterion is met.</p>
   </div>
 
-  <!-- Maturity Matrix -->
-  <div class="matrix-wrap" style="overflow-x: auto; margin: 24px 0;">
-    <table class="maturity-matrix">
-      <thead>
-        <tr>
-          <th style="min-width: 140px;">Dimension</th>
-          <th style="min-width: 120px;"><strong>L0</strong><br>Tacit</th>
-          <th style="min-width: 120px;"><strong>L1</strong><br>Defined</th>
-          <th style="min-width: 120px;"><strong>L2</strong><br>Practiced</th>
-          <th style="min-width: 140px;"><strong>L3</strong><br>Supervised</th>
-          <th style="min-width: 120px;"><strong>L4</strong><br>Autonomous</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td><strong>Knowledge lives in</strong></td>
-          <td>Individuals</td>
-          <td>Documents</td>
-          <td>Documents & habit</td>
-          <td>Documents, habit & system</td>
-          <td>System logic (docs as reference)</td>
-        </tr>
-        <tr>
-          <td><strong>Definition</strong></td>
-          <td>Undocumented or happy-path only</td>
-          <td>Every step, branch, input, output, exception</td>
-          <td>Corrected by real use</td>
-          <td>Encoded in rules/prompts</td>
-          <td>Versioned; changes flow through automation</td>
-        </tr>
-        <tr>
-          <td><strong>Execution</strong></td>
-          <td>Varies by person</td>
-          <td>Consistent on paper (not practice)</td>
-          <td>Consistent in practice</td>
-          <td>Machine executes; human reviews every output</td>
-          <td>Machine executes; human reviews exceptions/samples</td>
-        </tr>
-        <tr>
-          <td><strong>Exceptions</strong></td>
-          <td>Ad hoc, unrecorded</td>
-          <td>Listed</td>
-          <td>Catalogued; frequency known</td>
-          <td>Routed to human queue by rule</td>
-          <td>Most auto-resolved; novel ones escalated</td>
-        </tr>
-        <tr>
-          <td><strong>Data</strong></td>
-          <td>Wherever it is</td>
-          <td>Sources identified</td>
-          <td>Quality issues surfaced</td>
-          <td>Machine-readable, source of truth fixed</td>
-          <td>Monitored for drift</td>
-        </tr>
-        <tr>
-          <td><strong>Ownership</strong></td>
-          <td>Whoever does it</td>
-          <td>Named owner</td>
-          <td>Owner + practitioners</td>
-          <td>Owner + automation maintainer</td>
-          <td>Owner (outcomes); maintainer (uptime)</td>
-        </tr>
-        <tr>
-          <td><strong>Measurement</strong></td>
-          <td>None</td>
-          <td>Volume & cost estimated</td>
-          <td>Baseline measured</td>
-          <td>Automation vs. baseline compared</td>
-          <td>Exception rate & drift tracked</td>
-        </tr>
-        <tr>
-          <td><strong>Human role</strong></td>
-          <td>Performer</td>
-          <td>Author</td>
-          <td>Performer & critic</td>
-          <td>Supervisor & trainer</td>
-          <td>Auditor</td>
-        </tr>
-        <tr>
-          <td><strong>Exit criterion</strong></td>
-          <td>Process chosen; owner named</td>
-          <td>Document survives peer review by stranger</td>
-          <td>One full cycle as-defined; exceptions stable</td>
-          <td>Error rate ≤ baseline over agreed period</td>
-          <td>Exception rate & outcomes stable; rollback tested</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
+  <table class="d01-matrix">
+    <thead>
+      <tr>
+        <th style="min-width: 120px;">Dimension</th>
+        <th style="min-width: 100px;">L0 Tacit</th>
+        <th style="min-width: 100px;">L1 Defined</th>
+        <th style="min-width: 100px;">L2 Practiced</th>
+        <th style="min-width: 120px;">L3 Supervised</th>
+        <th style="min-width: 100px;">L4 Autonomous</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td><strong>Knowledge</strong></td><td>In individuals</td><td>In documents</td><td>Documents & habit</td><td>Documents, habit & system</td><td>In system (docs reference)</td></tr>
+      <tr><td><strong>Definition</strong></td><td>Undocumented</td><td>Every step & exception</td><td>Corrected by real use</td><td>Encoded in rules</td><td>Versioned in automation</td></tr>
+      <tr><td><strong>Execution</strong></td><td>Varies by person</td><td>Consistent on paper</td><td>Consistent in practice</td><td>Machine; human reviews all</td><td>Machine; human samples/exceptions</td></tr>
+      <tr><td><strong>Exceptions</strong></td><td>Ad hoc</td><td>Listed</td><td>Catalogued; frequency known</td><td>Routed to human queue</td><td>Auto-resolved; novel escalated</td></tr>
+      <tr><td><strong>Data</strong></td><td>Wherever</td><td>Sources identified</td><td>Quality issues known</td><td>Machine-readable, source truth</td><td>Monitored for drift</td></tr>
+      <tr><td><strong>Exit Criterion</strong></td><td>Owner named</td><td>Doc survives peer review</td><td>One cycle as-defined; exceptions stable</td><td>Error rate ≤ baseline</td><td>Outcomes stable; rollback tested</td></tr>
+    </tbody>
+  </table>
 
-  <!-- Level Descriptions -->
-  <div class="levels-container">
-    <div class="level-card level-0">
-      <div class="level-header">L0: Tacit</div>
-      <p>Process exists only in people's heads. How it's done varies by person and their experience. Output quality depends entirely on the performer.</p>
-      <p><strong>Why you're here:</strong> This is where every new process starts, and where processes remain that have never been formalized.</p>
-      <p><strong>How to exit:</strong> Name a process owner and have them document it. Move to L1.</p>
+  <div class="d01-levels">
+    <div class="d01-level">
+      <h4>L0: Tacit</h4>
+      <p>Process exists only in people's heads. How it's done varies by person. Output depends entirely on performer.</p>
+      <p><strong>Exit:</strong> Name owner. Have them document it. Move to L1.</p>
     </div>
 
-    <div class="level-card level-1">
-      <div class="level-header">L1: Defined</div>
-      <p>Every step, branch, input, output, and exception is written down. A stranger to the job could theoretically follow the document. Execution is still variable in practice.</p>
-      <p><strong>Exit criterion:</strong> Document survives review by someone who has never done the job.</p>
-      <p><strong>How to exit:</strong> Run the process manually, exactly as documented, for one full business cycle. Record what breaks. Move to L2.</p>
+    <div class="d01-level d01-level-1">
+      <h4>L1: Defined</h4>
+      <p>Every step, branch, input, output, and exception is written down. A stranger could theoretically follow it.</p>
+      <p><strong>Exit:</strong> Document survives review by someone who has never done the job.</p>
     </div>
 
-    <div class="level-card level-2">
-      <div class="level-header">L2: Practiced</div>
-      <p><strong style="color: #d84315;">⚠️ This is the level everyone skips, and it's where most automation fails.</strong></p>
-      <p>Process has been run as documented for at least one full cycle. Staff have built intuition for where it bends and breaks. Exceptions are known and their frequency is understood. The definition has been corrected by real use.</p>
-      <p><strong>Exit criterion:</strong> One full business cycle run as defined; exception list is stable (no new exceptions surfacing).</p>
-      <p><strong>Why it matters:</strong> This is where the document meets reality. It's how staff discover exceptions the author never imagined, and what makes L3 interviews worth conducting.</p>
+    <div class="d01-level d01-level-2">
+      <h4>L2: Practiced ⚠️</h4>
+      <p><strong>This is the level everyone skips, and where most automation fails.</strong> Process run as documented for one full cycle. Exceptions known and catalogued. Definition corrected by real use.</p>
+      <p><strong>Exit:</strong> One full cycle run as-defined; exception list stable.</p>
     </div>
 
-    <div class="level-card level-3">
-      <div class="level-header">L3: Supervised Automation</div>
-      <p>Process is encoded in automation rules or AI system prompts. The machine executes the process. A human reviews every output before it is acted upon. Exceptions that rules cannot handle are routed to a human queue.</p>
-      <p><strong>Exit criterion:</strong> Error rate at or below manual baseline, sustained over agreed period (typically 2-4 weeks).</p>
-      <p><strong>How to exit:</strong> Build confidence through measurement. Once exception rates and error rates are stable and below baseline, reduce review. Move to L4.</p>
+    <div class="d01-level d01-level-3">
+      <h4>L3: Supervised</h4>
+      <p>Process encoded in automation rules. Machine executes. Human reviews every output. Exceptions routed to human queue.</p>
+      <p><strong>Exit:</strong> Error rate at or below manual baseline for 2-4 weeks.</p>
     </div>
 
-    <div class="level-card level-4">
-      <div class="level-header">L4: Autonomous</div>
-      <p>Machine executes with limited human oversight. Humans review samples and exceptions, not every output. Most exceptions are resolved automatically; novel ones are escalated. Process changes flow through the automation (versioned, tested).</p>
-      <p><strong>Exit criterion:</strong> Exception rate and outcomes stable; rollback path tested and verified.</p>
-      <p><strong>Note:</strong> L4 is not "no humans." It is humans at the edges: auditing samples, handling novel exceptions, deciding when the process itself should change.</p>
+    <div class="d01-level d01-level-4">
+      <h4>L4: Autonomous</h4>
+      <p>Machine executes with limited oversight. Humans review samples and exceptions. Most exceptions auto-resolved; novel ones escalated.</p>
+      <p><strong>Exit:</strong> Exception rate and outcomes stable; rollback path tested.</p>
     </div>
   </div>
 
-  <!-- ── QUICK REFERENCE ──────────────────────────────── -->
-  <div class="sec-divider" id="sec-checklist">
+  <!-- CHECKLIST -->
+  <div class="sec-divider" id="d01-checklist">
     <div class="sec-divider-lbl">Assessment</div>
     <div class="sec-divider-title">Domain 01 Readiness Checklist</div>
     <div class="sec-divider-sep"></div>
   </div>
 
-  <div class="quickref-intro">
-    <p><strong>Domain 01: Process Maturity is ready when these 4 items are true:</strong></p>
+  <div style="background: #e3f2fd; padding: 16px; border-left: 4px solid #1976d2; border-radius: 4px; margin: 16px 0;">
+    <p><strong>Domain 01: Process Maturity is ready when these 4 items are true (PLUS all 6 prerequisite domains pass):</strong></p>
   </div>
 
-  <div class="checklist-items">
-    <div class="checklist-item">
-      <div class="item-num">1</div>
-      <div class="item-content">
+  <div class="d01-checklist-grid">
+    <div class="d01-checklist-item">
+      <span class="d01-checklist-num">1</span>
+      <div>
         <h4>Key processes documented</h4>
         <p>Step-by-step SOPs and decision points. Every step, branch, input, output, and exception written down.</p>
-        <p><strong>Maps to:</strong> L1 Defined minimum</p>
+        <p><strong style="color: #1976d2;">Maps to:</strong> L1 Defined minimum</p>
       </div>
     </div>
 
-    <div class="checklist-item">
-      <div class="item-num">2</div>
-      <div class="item-content">
+    <div class="d01-checklist-item">
+      <span class="d01-checklist-num">2</span>
+      <div>
         <h4>Process owners assigned</h4>
         <p>Each process has a single named owner accountable for its definition, exceptions, and outcomes.</p>
-        <p><strong>Maps to:</strong> L1 Defined minimum</p>
+        <p><strong style="color: #1976d2;">Maps to:</strong> L1 Defined minimum</p>
       </div>
     </div>
 
-    <div class="checklist-item">
-      <div class="item-num">3</div>
-      <div class="item-content">
+    <div class="d01-checklist-item">
+      <span class="d01-checklist-num">3</span>
+      <div>
         <h4>Performance baselines established</h4>
         <p>Current cycle time, error rate, cost, and hands-on time are known. This is the measurement against which automation will be judged.</p>
-        <p><strong>Maps to:</strong> L2 Practiced minimum</p>
+        <p><strong style="color: #1976d2;">Maps to:</strong> L2 Practiced minimum</p>
       </div>
     </div>
 
-    <div class="checklist-item">
-      <div class="item-num">4</div>
-      <div class="item-content">
+    <div class="d01-checklist-item">
+      <span class="d01-checklist-num">4</span>
+      <div>
         <h4>Exception paths mapped</h4>
-        <p>Not just the happy path. Documented: what happens when inputs are missing, malformed, contradictory, or when the happy path does not apply.</p>
-        <p><strong>Maps to:</strong> L2 Practiced minimum</p>
+        <p>Not just the happy path. Documented: what happens when inputs are missing, malformed, contradictory, or edge cases.</p>
+        <p><strong style="color: #1976d2;">Maps to:</strong> L2 Practiced minimum</p>
       </div>
     </div>
   </div>
 
-  <div class="plus-note">
-    <strong>PLUS:</strong> All six prerequisite domains must pass (Process, Data, Structure, Technical, People, Measurement). See "Readiness Gate" section above.
-  </div>
-
-  <!-- Common Gap Signals -->
-  <div class="gap-signals">
+  <!-- GAP SIGNALS -->
+  <div class="d01-gap" id="d01-gaps">
     <h3>🚨 Common Gap Signals: Recognize When You're Not Ready</h3>
     <ul>
       <li>"Tribal knowledge is the primary process documentation" — Only the SMEs know how it really works</li>
@@ -465,71 +335,68 @@
     </ul>
   </div>
 
-  <!-- ── ANTI-PATTERNS ──────────────────────────────── -->
-  <div class="sec-divider" id="sec-anti">
+  <!-- ANTI-PATTERNS -->
+  <div class="sec-divider" id="d01-anti">
     <div class="sec-divider-lbl">Common Mistakes</div>
     <div class="sec-divider-title">Anti-Patterns to Recognize and Avoid</div>
     <div class="sec-divider-sep"></div>
   </div>
 
-  <div class="antipatterns">
-    <div class="antipattern">
-      <h4>1. Automating to Avoid Defining</h4>
-      <p>"We'll let the AI figure out the process." The AI will figure out <em>a</em> process. It will not be yours, and you will not know what it is.</p>
-      <p><strong>Fix:</strong> Define the process first. Automation is the third step, not the first.</p>
-    </div>
-
-    <div class="antipattern">
-      <h4>2. Starting with the Hardest Process</h4>
-      <p>The one with the most exceptions, most stakeholders, least documentation. Automating it fails spectacularly and kills organizational momentum.</p>
-      <p><strong>Fix:</strong> Start with the boring one. The organization needs to learn how automation fails before it can afford an interesting failure.</p>
-    </div>
-
-    <div class="antipattern">
-      <h4>3. Skipping L2 (The Manual Run)</h4>
-      <p>The temptation is to go straight from a finished document to automation. But L2 is where the document meets reality: where staff discover exceptions the author never imagined.</p>
-      <p><strong>Fix:</strong> Run the process as written for one full business cycle. Document what fails. Use that to design the automation.</p>
-    </div>
-
-    <div class="antipattern">
-      <h4>4. Treating Readiness as a One-Time Assessment</h4>
-      <p>Every prerequisite decays. Processes drift, data degrades, owners leave. You cannot assess once and assume you're ready forever.</p>
-      <p><strong>Fix:</strong> The gate is re-run for each new automation, not passed once. Readiness is ongoing.</p>
-    </div>
-
-    <div class="antipattern">
-      <h4>5. Tool Procurement Before Process Definition</h4>
-      <p>Buying the platform before the process is defined produces a platform looking for a use case. The tooling decision is downstream, not upstream.</p>
-      <p><strong>Fix:</strong> Define, practice, measure. Then decide on tools. Not the other way around.</p>
-    </div>
-
-    <div class="antipattern">
-      <h4>6. Letting the Vendor Define Exception Thresholds</h4>
-      <p>The point at which an automation should hand off to a human is a business decision, shaped by the cost of errors in your context. Defaults are set for the vendor's typical customer, not you.</p>
-      <p><strong>Fix:</strong> You decide when exceptions escape to humans. This is a governance decision, not a technical one.</p>
-    </div>
+  <div class="d01-antipattern">
+    <h4>1. Automating to Avoid Defining</h4>
+    <p>"We'll let the AI figure out the process." The AI will figure out <em>a</em> process. It will not be yours, and you will not know what it is.</p>
+    <p><strong>Fix:</strong> Define the process first. Automation is the third step, not the first.</p>
   </div>
 
-  <!-- Closing -->
-  <div class="closing-section">
+  <div class="d01-antipattern">
+    <h4>2. Starting with the Hardest Process</h4>
+    <p>The one with the most exceptions, most stakeholders, least documentation. Automating it fails spectacularly.</p>
+    <p><strong>Fix:</strong> Start with the boring one. Learn how automation fails before attempting something interesting.</p>
+  </div>
+
+  <div class="d01-antipattern">
+    <h4>3. Skipping L2 (The Manual Run)</h4>
+    <p>The temptation is to go straight from a finished document to automation. But L2 is where the document meets reality.</p>
+    <p><strong>Fix:</strong> Run the process as written for one full business cycle. Document what fails. Use that to design automation.</p>
+  </div>
+
+  <div class="d01-antipattern">
+    <h4>4. Treating Readiness as a One-Time Assessment</h4>
+    <p>Every prerequisite decays. Processes drift, data degrades, owners leave.</p>
+    <p><strong>Fix:</strong> Re-run the gate for each new automation, not once and for all.</p>
+  </div>
+
+  <div class="d01-antipattern">
+    <h4>5. Tool Procurement Before Process Definition</h4>
+    <p>Buying the platform before the process is defined produces a platform looking for a use case.</p>
+    <p><strong>Fix:</strong> Define, practice, measure. Then decide on tools. Not the other way around.</p>
+  </div>
+
+  <div class="d01-antipattern">
+    <h4>6. Letting the Vendor Define Exception Thresholds</h4>
+    <p>The point at which an automation should hand off to a human is a business decision. Defaults are set for the vendor's typical customer, not you.</p>
+    <p><strong>Fix:</strong> You decide when exceptions escape to humans. This is a governance decision, not technical.</p>
+  </div>
+
+  <!-- NEXT STEPS -->
+  <div style="background: #f5f5f5; padding: 24px; border-radius: 8px; margin: 32px 0;">
     <h2>Next Steps</h2>
     <ol>
-      <li><strong>Self-assess:</strong> Use the 4-item checklist above. Which items do you have? Which are missing?</li>
-      <li><strong>Assess readiness:</strong> Do all six prerequisite domains pass? If not, which is the biggest gap?</li>
+      <li><strong>Self-assess:</strong> Use the 4-item checklist above. Which items do you have?</li>
+      <li><strong>Assess readiness:</strong> Do all six prerequisite domains pass? Which is the biggest gap?</li>
       <li><strong>Place your process:</strong> Use the L0-L4 matrix. Where does your process sit today?</li>
       <li><strong>Plan the next level:</strong> What does the exit criterion for your next level require?</li>
-      <li><strong>Work the lowest row first:</strong> Across the matrix, which row has the biggest gap? Start there.</li>
+      <li><strong>Work the lowest row first:</strong> Across the matrix, which row has the biggest gap?</li>
     </ol>
 
-    <div class="closing-quote">
-      <blockquote>
-        "There is nothing so useless as doing efficiently that which should not be done at all." — Peter Drucker
-      </blockquote>
+    <div style="background: white; padding: 20px; border-radius: 6px; margin-top: 20px; border-left: 4px solid #1976d2;">
+      <blockquote style="font-style: italic; color: #1565c0; font-weight: 500; margin: 0 0 12px 0;">"There is nothing so useless as doing efficiently that which should not be done at all." — Peter Drucker</blockquote>
       <p>Domain 01 exists to make sure you're automating something worth amplifying — not scaling bad practices at speed.</p>
     </div>
   </div>
 
-</div><!-- /.page -->
+</div>
+</div>
 
 <script src="section-jump.js"></script>
 <script src="spa-nav.js"></script>
