@@ -11,7 +11,8 @@ window.getViewConfig = function(pageName) {
     details: { remove: 'full', renameCleanToFull: true },
     workflow: { remove: 'full', renameCleanToFull: true },
     maturity: { remove: 'full', renameCleanToFull: true },
-    approaches: { remove: 'full', renameCleanToFull: true }
+    approaches: { remove: 'full', renameCleanToFull: true },
+    'domain-01': { remove: 'full', renameCleanToFull: true }
   };
   return configMap[pageName] || { remove: null, renameCleanToFull: false };
 };
