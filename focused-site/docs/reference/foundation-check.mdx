@@ -1,0 +1,110 @@
+---
+title: Foundation Readiness Check
+sidebar_label: Foundation Readiness Check
+---
+
+import PrintableDownload from '@site/src/components/PrintableDownload';
+
+# Foundation Readiness Check
+
+Confirm your organization is ready to scale AI safely across seven foundation domains.
+
+Related guides: [Pre-Flight Prerequisites](/docs/foundation/prerequisites) · [Implementation Guide](/docs/implementation/guide)
+
+<PrintableDownload href="/worksheets/foundation-readiness-check.html" />
+
+## Scoring Method
+
+1. Score each item as Yes or No.
+2. Count total Yes results.
+3. Use the interpretation table below.
+
+| Score | Interpretation | Recommended Action |
+| --- | --- | --- |
+| 0–17 | High readiness risk | Fix core gaps before production AI deployment |
+| 18–27 | Partial readiness | Start only with low-risk, supervised use cases |
+| 28–34 | Strong readiness baseline | Proceed with controlled scale-up |
+
+## 1. Process Maturity
+
+Documented, owned, and measurable workflows.
+
+- [ ] Key processes are documented with steps and decision points.
+- [ ] Process owners are assigned and accountable.
+- [ ] Performance baselines exist (time, error, cost).
+- [ ] Exception paths are mapped beyond the happy path.
+
+Deep dive: [Domain 01 Guide](/docs/reference/domain-01)
+
+## 2. Data Foundation
+
+Trusted data inventory, quality, lineage, and ownership.
+
+- [ ] Data inventory is complete for major datasets.
+- [ ] Classification scheme is defined and applied.
+- [ ] Data quality standards are defined per dataset.
+- [ ] Lineage is documented for critical datasets.
+- [ ] Dataset ownership is assigned.
+
+## 3. Information Security
+
+Security policy, access control, and incident readiness for AI.
+
+- [ ] Security policy is documented and approved.
+- [ ] IAM and RBAC follow least privilege.
+- [ ] Secrets management is in use for credentials and keys.
+- [ ] Secure engineering practices apply to AI components.
+- [ ] AI-related incident response plan is tested.
+
+## 4. Privacy and Compliance
+
+Legal basis, regulation tracking, and privacy-by-design controls.
+
+- [ ] PII is mapped with legal basis and purpose.
+- [ ] Applicable regulations are identified and tracked.
+- [ ] Privacy-by-design controls are applied by default.
+- [ ] Legal review is required before deployment.
+- [ ] Retention and deletion policies cover AI training data.
+
+## 5. Technology Baseline
+
+Platform, integration, identity, and delivery standards.
+
+- [ ] Cloud and AI platform standards are defined.
+- [ ] API standards and service catalog exist.
+- [ ] Identity and SSO integration is available.
+- [ ] Observability standards are enforced.
+- [ ] CI/CD includes test, security, and approval gates.
+
+## 6. People and Change
+
+Sponsorship, literacy, reskilling, and adoption feedback.
+
+- [ ] AI literacy baseline exists for employees.
+- [ ] Executive sponsors are named and active.
+- [ ] Change management capability is in place.
+- [ ] Reskilling paths exist for impacted roles.
+- [ ] Feedback channels exist for AI adoption issues.
+
+## 7. Ethics and Principles
+
+Adopted principles, bias checks, explainability, and appeal paths.
+
+- [ ] AI principles are formally adopted.
+- [ ] Ethics owner or committee is assigned.
+- [ ] Bias assessment process is defined.
+- [ ] Explainability standards exist for high-impact decisions.
+- [ ] Override and appeal paths are documented.
+
+## Summary
+
+| Domain | Total Items | Yes | No |
+| --- | --- | --- | --- |
+| Process Maturity | 4 |  |  |
+| Data Foundation | 5 |  |  |
+| Information Security | 5 |  |  |
+| Privacy and Compliance | 5 |  |  |
+| Technology Baseline | 5 |  |  |
+| People and Change | 5 |  |  |
+| Ethics and Principles | 5 |  |  |
+| Total | 34 |  |  |

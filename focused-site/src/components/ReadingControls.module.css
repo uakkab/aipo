@@ -1,0 +1,82 @@
+.controls {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  margin-right: 0.35rem;
+}
+
+.group {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.15rem;
+  padding: 0.15rem;
+  border: 1px solid var(--ifm-color-emphasis-300);
+  border-radius: 6px;
+  background: var(--ifm-background-surface-color);
+}
+
+.button,
+.contrast {
+  appearance: none;
+  margin: 0;
+  border: none;
+  border-radius: 4px;
+  background: transparent;
+  color: var(--ifm-font-color-base);
+  cursor: pointer;
+  font: inherit;
+  font-size: 0.78rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.button {
+  min-width: 1.85rem;
+  padding: 0.2rem 0.4rem;
+}
+
+.contrast {
+  min-width: 2.1rem;
+  padding: 0.28rem 0.45rem;
+  border: 1px solid var(--ifm-color-emphasis-300);
+  background: var(--ifm-background-surface-color);
+}
+
+.button:hover,
+.contrast:hover {
+  background: var(--ifm-color-emphasis-200);
+}
+
+.button:focus-visible,
+.contrast:focus-visible {
+  outline: 2px solid var(--ifm-color-primary);
+  outline-offset: 1px;
+}
+
+.active {
+  background: var(--ifm-color-primary);
+  color: #fff;
+  border-color: var(--ifm-color-primary);
+}
+
+.active:hover {
+  background: var(--ifm-color-primary-dark);
+  color: #fff;
+}
+
+@media (max-width: 996px) {
+  .controls {
+    margin-right: 0.15rem;
+    gap: 0.2rem;
+  }
+
+  .button {
+    min-width: 1.65rem;
+    padding: 0.15rem 0.3rem;
+  }
+
+  .contrast {
+    min-width: 1.9rem;
+    padding: 0.2rem 0.35rem;
+  }
+}

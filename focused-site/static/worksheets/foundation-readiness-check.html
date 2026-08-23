@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Foundation Readiness Check — Printable Worksheet</title>
+  <link rel="stylesheet" href="worksheet.css" />
+</head>
+<body>
+  <div class="toolbar">
+    <p>Foundation Readiness Check · Printable worksheet</p>
+    <div class="toolbar-actions">
+      <button type="button" onclick="window.print()">Print worksheet</button>
+    </div>
+  </div>
+
+  <main class="sheet">
+    <header class="sheet-header">
+      <p class="eyebrow">AI+ Organization · Reference</p>
+      <h1>Foundation Readiness Check</h1>
+      <p class="lede">Confirm your organization is ready to scale AI safely. Score each item Yes or No, then total your results.</p>
+    </header>
+
+    <section class="section">
+      <h2>Assessment Metadata</h2>
+      <div class="meta-fields">
+        <div class="meta-row">
+          <div class="meta-label">Organization</div>
+          <div class="meta-write"></div>
+        </div>
+        <div class="meta-row">
+          <div class="meta-label">Assessment date</div>
+          <div class="meta-write"></div>
+        </div>
+        <div class="meta-row">
+          <div class="meta-label">Facilitator / owner</div>
+          <div class="meta-write"></div>
+        </div>
+        <div class="meta-row">
+          <div class="meta-label">Participants</div>
+          <div class="meta-write"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Scoring Method</h2>
+      <ul>
+        <li>Mark each item as Yes or No.</li>
+        <li>Count total Yes results.</li>
+        <li>Use the interpretation table below.</li>
+      </ul>
+      <table class="score-table">
+        <thead>
+          <tr><th>Score</th><th>Interpretation</th><th>Recommended action</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>0–17</td><td>High readiness risk</td><td>Fix core gaps before production AI deployment</td></tr>
+          <tr><td>18–27</td><td>Partial readiness</td><td>Start only with low-risk, supervised use cases</td></tr>
+          <tr><td>28–34</td><td>Strong readiness baseline</td><td>Proceed with controlled scale-up</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="section page-start">
+      <h2>1. Process Maturity (4)</h2>
+      <ul class="check-list">
+        <li><input type="checkbox" /><span>Key processes are documented with steps and decision points.</span></li>
+        <li><input type="checkbox" /><span>Process owners are assigned and accountable.</span></li>
+        <li><input type="checkbox" /><span>Performance baselines exist (time, error, cost).</span></li>
+        <li><input type="checkbox" /><span>Exception paths are mapped beyond the happy path.</span></li>
+      </ul>
+      <div class="notes-block">
+        <label>Notes / gaps</label>
+        <div class="write-box"></div>
+      </div>
+    </section>
+
+    <section class="section page-start">
+      <h2>2. Data Foundation (5)</h2>
+      <ul class="check-list">
+        <li><input type="checkbox" /><span>Data inventory is complete for major datasets.</span></li>
+        <li><input type="checkbox" /><span>Classification scheme is defined and applied.</span></li>
+        <li><input type="checkbox" /><span>Data quality standards are defined per dataset.</span></li>
+        <li><input type="checkbox" /><span>Lineage is documented for critical datasets.</span></li>
+        <li><input type="checkbox" /><span>Dataset ownership is assigned.</span></li>
+      </ul>
+      <div class="notes-block">
+        <label>Notes / gaps</label>
+        <div class="write-box"></div>
+      </div>
+    </section>
+
+    <section class="section page-start">
+      <h2>3. Information Security (5)</h2>
+      <ul class="check-list">
+        <li><input type="checkbox" /><span>Security policy is documented and approved.</span></li>
+        <li><input type="checkbox" /><span>IAM and RBAC follow least privilege.</span></li>
+        <li><input type="checkbox" /><span>Secrets management is in use for credentials and keys.</span></li>
+        <li><input type="checkbox" /><span>Secure engineering practices apply to AI components.</span></li>
+        <li><input type="checkbox" /><span>AI-related incident response plan is tested.</span></li>
+      </ul>
+      <div class="notes-block">
+        <label>Notes / gaps</label>
+        <div class="write-box"></div>
+      </div>
+    </section>
+
+    <section class="section page-start">
+      <h2>4. Privacy and Compliance (5)</h2>
+      <ul class="check-list">
+        <li><input type="checkbox" /><span>PII is mapped with legal basis and purpose.</span></li>
+        <li><input type="checkbox" /><span>Applicable regulations are identified and tracked.</span></li>
+        <li><input type="checkbox" /><span>Privacy-by-design controls are applied by default.</span></li>
+        <li><input type="checkbox" /><span>Legal review is required before deployment.</span></li>
+        <li><input type="checkbox" /><span>Retention and deletion policies cover AI training data.</span></li>
+      </ul>
+      <div class="notes-block">
+        <label>Notes / gaps</label>
+        <div class="write-box"></div>
+      </div>
+    </section>
+
+    <section class="section page-start">
+      <h2>5. Technology Baseline (5)</h2>
+      <ul class="check-list">
+        <li><input type="checkbox" /><span>Cloud and AI platform standards are defined.</span></li>
+        <li><input type="checkbox" /><span>API standards and service catalog exist.</span></li>
+        <li><input type="checkbox" /><span>Identity and SSO integration is available.</span></li>
+        <li><input type="checkbox" /><span>Observability standards are enforced.</span></li>
+        <li><input type="checkbox" /><span>CI/CD includes test, security, and approval gates.</span></li>
+      </ul>
+      <div class="notes-block">
+        <label>Notes / gaps</label>
+        <div class="write-box"></div>
+      </div>
+    </section>
+
+    <section class="section page-start">
+      <h2>6. People and Change (5)</h2>
+      <ul class="check-list">
+        <li><input type="checkbox" /><span>AI literacy baseline exists for employees.</span></li>
+        <li><input type="checkbox" /><span>Executive sponsors are named and active.</span></li>
+        <li><input type="checkbox" /><span>Change management capability is in place.</span></li>
+        <li><input type="checkbox" /><span>Reskilling paths exist for impacted roles.</span></li>
+        <li><input type="checkbox" /><span>Feedback channels exist for AI adoption issues.</span></li>
+      </ul>
+      <div class="notes-block">
+        <label>Notes / gaps</label>
+        <div class="write-box"></div>
+      </div>
+    </section>
+
+    <section class="section page-start">
+      <h2>7. Ethics and Principles (5)</h2>
+      <ul class="check-list">
+        <li><input type="checkbox" /><span>AI principles are formally adopted.</span></li>
+        <li><input type="checkbox" /><span>Ethics owner or committee is assigned.</span></li>
+        <li><input type="checkbox" /><span>Bias assessment process is defined.</span></li>
+        <li><input type="checkbox" /><span>Explainability standards exist for high-impact decisions.</span></li>
+        <li><input type="checkbox" /><span>Override and appeal paths are documented.</span></li>
+      </ul>
+      <div class="notes-block">
+        <label>Notes / gaps</label>
+        <div class="write-box"></div>
+      </div>
+    </section>
+
+    <section class="section page-start">
+      <h2>Summary</h2>
+      <table class="summary">
+        <thead>
+          <tr><th>Domain</th><th>Items</th><th>Yes</th><th>No</th><th>Priority gaps</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Process Maturity</td><td>4</td><td></td><td></td><td><span class="write-line"></span></td></tr>
+          <tr><td>Data Foundation</td><td>5</td><td></td><td></td><td><span class="write-line"></span></td></tr>
+          <tr><td>Information Security</td><td>5</td><td></td><td></td><td><span class="write-line"></span></td></tr>
+          <tr><td>Privacy and Compliance</td><td>5</td><td></td><td></td><td><span class="write-line"></span></td></tr>
+          <tr><td>Technology Baseline</td><td>5</td><td></td><td></td><td><span class="write-line"></span></td></tr>
+          <tr><td>People and Change</td><td>5</td><td></td><td></td><td><span class="write-line"></span></td></tr>
+          <tr><td>Ethics and Principles</td><td>5</td><td></td><td></td><td><span class="write-line"></span></td></tr>
+          <tr><th>Total</th><th>34</th><th></th><th></th><th></th></tr>
+        </tbody>
+      </table>
+      <div class="notes-block">
+        <label>Overall interpretation and next actions</label>
+        <div class="write-box tall"></div>
+      </div>
+    </section>
+
+    <p class="footer-note">Companion to Pre-Flight Prerequisites and the Implementation Guide. Print this page or use your browser’s Print → Save as PDF.</p>
+  </main>
+</body>
+</html>
